@@ -1,0 +1,1260 @@
+{
+  "metadata": {
+    "schema_version": 2,
+    "evaluation": "actual_offline_bm25_not_llm",
+    "generated_at": "2026-11-23T14:25:25.535545+00:00",
+    "split": "tuning",
+    "k": 5,
+    "recall_definition": "mean(|relevant intersect top5| / |relevant|), macro per query",
+    "mrr_definition": "mean(1 / first relevant rank within top5), zero for absent/error",
+    "relevance_note": "Unjudged candidates are not proven irrelevant; labels may be incomplete.",
+    "holdout_note": "Predefined paraphrases, not blind/new-intent or unseen-corpus evaluation.",
+    "data_reference_time": "2026-04-21T12:00:00+00:00",
+    "knowledge_documents": 21,
+    "shared_seed_resolutions": 10,
+    "employee_context": "EMP-001",
+    "database": "fresh_temporary_seed_only",
+    "python": "3.12.10",
+    "rank_bm25_version": "0.2.2",
+    "corpus_sha256": "8997601342f2ee5a0e3adb9135cd43a6cc7e7fa96ee3644b535741ef3dff5331",
+    "queries_sha256": "47231eb42f9bc0b3e2477fb4b9baac9c4cc1c0b6edd7dac6eb8e085cc6eea70c",
+    "retrieval_source_sha256": "41b730af8fbc077e4733d21071a1f1ee33270faa93dea99a75fb265613337508",
+    "uv_lock_sha256": "20a8ff2ff8d1e81428d9168c143116bc4901ec46be7b106570ec8b83dc467c4b",
+    "evaluator_source_sha256": "818e4d59f2418b45fb93a496e5b00f9ca9c4fac842fcd7690cfb4830d46702b4",
+    "storage_source_sha256": "39b780f1a25d2122d3ec2540e408d32c55aaeb006c9f130806debbd93d95499f"
+  },
+  "summary": {
+    "n_queries": 20,
+    "hit_queries": 20,
+    "complete_recall_queries": 20,
+    "recall_at_5": 1.0,
+    "mrr_at_5": 0.95,
+    "retrieval_errors": 0
+  },
+  "by_split": {
+    "tuning": {
+      "n_queries": 20,
+      "hit_queries": 20,
+      "complete_recall_queries": 20,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.95,
+      "retrieval_errors": 0
+    }
+  },
+  "by_corpus": {
+    "knowledge": {
+      "n_queries": 10,
+      "hit_queries": 10,
+      "complete_recall_queries": 10,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.95,
+      "retrieval_errors": 0
+    },
+    "resolutions": {
+      "n_queries": 10,
+      "hit_queries": 10,
+      "complete_recall_queries": 10,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.95,
+      "retrieval_errors": 0
+    }
+  },
+  "by_language": {
+    "en": {
+      "n_queries": 10,
+      "hit_queries": 10,
+      "complete_recall_queries": 10,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.9,
+      "retrieval_errors": 0
+    },
+    "zh": {
+      "n_queries": 10,
+      "hit_queries": 10,
+      "complete_recall_queries": 10,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "retrieval_errors": 0
+    }
+  },
+  "groups": [
+    {
+      "split": "tuning",
+      "corpus": "knowledge",
+      "language": "en",
+      "n_queries": 5,
+      "hit_queries": 5,
+      "complete_recall_queries": 5,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.9,
+      "retrieval_errors": 0
+    },
+    {
+      "split": "tuning",
+      "corpus": "knowledge",
+      "language": "zh",
+      "n_queries": 5,
+      "hit_queries": 5,
+      "complete_recall_queries": 5,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "retrieval_errors": 0
+    },
+    {
+      "split": "tuning",
+      "corpus": "resolutions",
+      "language": "en",
+      "n_queries": 5,
+      "hit_queries": 5,
+      "complete_recall_queries": 5,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.9,
+      "retrieval_errors": 0
+    },
+    {
+      "split": "tuning",
+      "corpus": "resolutions",
+      "language": "zh",
+      "n_queries": 5,
+      "hit_queries": 5,
+      "complete_recall_queries": 5,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "retrieval_errors": 0
+    }
+  ],
+  "incomplete_recall_query_ids": [],
+  "non_top1_query_ids": [
+    "Q-03-tuning-en",
+    "Q-08-tuning-en"
+  ],
+  "queries": [
+    {
+      "id": "Q-01-tuning-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-01",
+      "query": "account locked",
+      "relevant_ids": [
+        "KB-ACC-002"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-ACC-002"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-ACC-001",
+        "KB-ACC-004",
+        "KB-ACC-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-ACC-002",
+          "score": 13.035773615395257,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-ACC-001",
+          "score": 10.805459127564962,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-ACC-004",
+          "score": 7.694603480932834,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-ACC-005",
+          "score": 5.394033481840306,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-01-tuning-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-01",
+      "query": "账号被锁定",
+      "relevant_ids": [
+        "KB-ACC-002"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-ACC-002"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-ACC-002",
+          "score": 90.0373174660005,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-02-tuning-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-02",
+      "query": "Salesforce slow Chicago",
+      "relevant_ids": [
+        "KB-APP-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-APP-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-APP-004",
+        "KB-PER-002",
+        "KB-APP-002",
+        "KB-ACC-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-APP-001",
+          "score": 69.8086567383194,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-APP-004",
+          "score": 61.872808245624725,
+          "source_type": "guidance",
+          "expired": true
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-PER-002",
+          "score": 56.986115951238425,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-APP-002",
+          "score": 52.286369496926206,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-005",
+          "score": 48.36848054846539,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-02-tuning-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-02",
+      "query": "芝加哥 Salesforce 很慢",
+      "relevant_ids": [
+        "KB-APP-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-APP-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-APP-004",
+        "KB-PER-002",
+        "KB-APP-002",
+        "KB-ACC-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-APP-001",
+          "score": 126.80695696465263,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-APP-004",
+          "score": 76.64177131307108,
+          "source_type": "guidance",
+          "expired": true
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-PER-002",
+          "score": 76.22551785194827,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-APP-002",
+          "score": 71.52577139763603,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-005",
+          "score": 67.60788244917522,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-03-tuning-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-03",
+      "query": "VPN disconnects client version",
+      "relevant_ids": [
+        "KB-CON-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 0.5,
+      "first_relevant_rank": 2,
+      "matched_ids": [
+        "KB-CON-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-CON-002",
+        "KB-CON-004",
+        "KB-CON-003",
+        "KB-ACC-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-CON-002",
+          "score": 102.81031430704716,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-CON-001",
+          "score": 102.59825721226842,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-CON-004",
+          "score": 96.78600700211163,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-CON-003",
+          "score": 91.16798543840503,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-005",
+          "score": 77.38997914068717,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-03-tuning-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-03",
+      "query": "VPN 客户端反复断开",
+      "relevant_ids": [
+        "KB-CON-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-CON-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-CON-002",
+        "KB-CON-004",
+        "KB-CON-003",
+        "KB-ACC-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-CON-001",
+          "score": 169.46069451305027,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-CON-002",
+          "score": 126.7584953763641,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-CON-004",
+          "score": 120.97774737238089,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-CON-003",
+          "score": 113.01776579383875,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-005",
+          "score": 104.2908801085206,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-04-tuning-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-04",
+      "query": "production database access",
+      "relevant_ids": [
+        "KB-PER-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-PER-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-PER-002",
+        "KB-PER-004",
+        "KB-CMP-002",
+        "KB-CON-002"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-PER-001",
+          "score": 20.876119327755124,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-PER-002",
+          "score": 9.066263314760999,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-PER-004",
+          "score": 8.985549627319363,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-CMP-002",
+          "score": 8.855167089311879,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-CON-002",
+          "score": 8.533510991925537,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-04-tuning-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-04",
+      "query": "生产数据库权限申请",
+      "relevant_ids": [
+        "KB-PER-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-PER-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-ACC-005",
+        "KB-PER-004",
+        "KB-PER-003",
+        "KB-PER-002"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-PER-001",
+          "score": 123.47621688285327,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-ACC-005",
+          "score": 52.27635767385409,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-PER-004",
+          "score": 51.20838594165002,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-PER-003",
+          "score": 50.903057418222346,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-PER-002",
+          "score": 49.220564806057254,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-05-tuning-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-05",
+      "query": "report regression after Friday maintenance",
+      "relevant_ids": [
+        "KB-CMP-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-CMP-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-CMP-003",
+        "KB-CON-003",
+        "KB-ACC-001",
+        "KB-APP-002"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-CMP-001",
+          "score": 30.52822639970861,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-CMP-003",
+          "score": 13.933096650521279,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-CON-003",
+          "score": 13.73423138963975,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-ACC-001",
+          "score": 13.409760809358351,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-APP-002",
+          "score": 13.388322211424407,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-05-tuning-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-05",
+      "query": "周五维护后报表异常",
+      "relevant_ids": [
+        "KB-CMP-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-CMP-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-PER-004",
+        "KB-APP-003",
+        "KB-CMP-003",
+        "KB-CMP-004"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-CMP-001",
+          "score": 161.58533962832894,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-PER-004",
+          "score": 89.26869342574427,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-APP-003",
+          "score": 88.4850850042079,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-CMP-003",
+          "score": 87.28047016726617,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-CMP-004",
+          "score": 78.98179130114961,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-06-tuning-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-06",
+      "query": "password reset restored sign in",
+      "relevant_ids": [
+        "HIST-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-002",
+        "HIST-004",
+        "HIST-005",
+        "HIST-006"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-001",
+          "score": 17.309185064934937,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-002",
+          "score": 12.760648150297527,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-004",
+          "score": 8.099443626841287,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-005",
+          "score": 8.055184757631942,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-006",
+          "score": 8.04696835980026,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-06-tuning-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-06",
+      "query": "密码重置恢复登录",
+      "relevant_ids": [
+        "HIST-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-008",
+        "HIST-009",
+        "HIST-005",
+        "HIST-004"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-001",
+          "score": 55.083193098036375,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-008",
+          "score": 28.57797742422267,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-009",
+          "score": 24.717970624392905,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-005",
+          "score": 21.34426133002711,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-004",
+          "score": 21.338740117856673,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-07-tuning-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-07",
+      "query": "browser session refresh Salesforce",
+      "relevant_ids": [
+        "HIST-002"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-002"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-010",
+        "HIST-007"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-002",
+          "score": 78.89597173602496,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-010",
+          "score": 66.19774826100134,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-007",
+          "score": 37.21010121746304,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-07-tuning-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-07",
+      "query": "Salesforce 浏览器会话刷新",
+      "relevant_ids": [
+        "HIST-002"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-002"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-010",
+        "HIST-007"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-002",
+          "score": 133.6963584252308,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-010",
+          "score": 88.47195289674659,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-007",
+          "score": 70.83027494113179,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-08-tuning-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-08",
+      "query": "VPN upgrade fixed disconnects",
+      "relevant_ids": [
+        "HIST-003"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 0.5,
+      "first_relevant_rank": 2,
+      "matched_ids": [
+        "HIST-003"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-004",
+        "HIST-009"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-004",
+          "score": 88.06875616964518,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-003",
+          "score": 86.96799446394736,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-009",
+          "score": 78.9300715671548,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-08-tuning-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-08",
+      "query": "VPN 升级解决断连",
+      "relevant_ids": [
+        "HIST-003"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-003"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-004",
+        "HIST-009"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-003",
+          "score": 147.7851235225245,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-004",
+          "score": 110.55772758432077,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-009",
+          "score": 104.78941446890202,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-09-tuning-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-09",
+      "query": "Tableau access after approval",
+      "relevant_ids": [
+        "HIST-005"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-005"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-007",
+        "HIST-006",
+        "HIST-001",
+        "HIST-010"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-005",
+          "score": 60.79488041516732,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-007",
+          "score": 55.74279833936928,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-006",
+          "score": 27.66048073938469,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-001",
+          "score": 26.40632145169458,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-010",
+          "score": 26.30373026421714,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-09-tuning-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-09",
+      "query": "审批后恢复 Tableau 权限",
+      "relevant_ids": [
+        "HIST-005"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-005"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-007",
+        "HIST-006",
+        "HIST-010",
+        "HIST-008"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-005",
+          "score": 89.8002418233221,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-007",
+          "score": 66.77433951130928,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-006",
+          "score": 38.99815759619658,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-010",
+          "score": 38.13683565183349,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-008",
+          "score": 38.117912310094376,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-10-tuning-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "tuning",
+      "equivalence_group": "RETR-10",
+      "query": "fresh upstream view refresh",
+      "relevant_ids": [
+        "HIST-007"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-007"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-006",
+        "HIST-005",
+        "HIST-002"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-007",
+          "score": 22.98610510914715,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-006",
+          "score": 9.981909331182358,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-005",
+          "score": 9.711563095561438,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-002",
+          "score": 9.595022906331161,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-10-tuning-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "tuning",
+      "equivalence_group": "RETR-10",
+      "query": "上游正常刷新视图恢复",
+      "relevant_ids": [
+        "HIST-007"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-007"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-001",
+        "HIST-005",
+        "HIST-004",
+        "HIST-006"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-007",
+          "score": 93.84917245331465,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-001",
+          "score": 33.71734039358502,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-005",
+          "score": 33.70843114346038,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-004",
+          "score": 33.70290993128994,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-006",
+          "score": 33.69306169349505,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    }
+  ]
+}

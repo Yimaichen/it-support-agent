@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-11-23T10:36:20.246987+00:00",
+  "pid": 11826,
+  "model": "deepseek-flash",
+  "versions": {
+    "code": "311eafea8873a38f8277918162386548944b5296f80fa9ecc66cb7a51f536da5",
+    "frontend": "3e719de0b0f945318cdeca22a8e908ca7353f684a7845049c3b073ea267f52b3",
+    "data": "8abe8f64e49852bfcd17bb3d2177873f94ffabb1734c848b0ac0f73947bca22a",
+    "dependencies": "9d8c103be5ecd614b4cf447012b103e78fb6092975acdf04af8ab90655fdb186",
+    "build": "cb569fc37e51"
+  },
+  "mode": "live_scripted_manual_texts",
+  "database": "/Users/chenyimai/Desktop/\u836f\u660e\u751f\u7269\u9879\u76ee/runtime/acceptance/20261123T103620Z-twenty-manual-retest/support.sqlite3",
+  "scenarios": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B12",
+    "C01",
+    "C02",
+    "C05"
+  ],
+  "finished_at": "2026-11-23T10:44:11.657010+00:00",
+  "ending_versions": {
+    "code": "311eafea8873a38f8277918162386548944b5296f80fa9ecc66cb7a51f536da5",
+    "frontend": "3e719de0b0f945318cdeca22a8e908ca7353f684a7845049c3b073ea267f52b3",
+    "data": "8abe8f64e49852bfcd17bb3d2177873f94ffabb1734c848b0ac0f73947bca22a",
+    "dependencies": "9d8c103be5ecd614b4cf447012b103e78fb6092975acdf04af8ab90655fdb186",
+    "build": "cb569fc37e51"
+  },
+  "version_stable": true,
+  "turn_count": 79,
+  "noncompleted": []
+}

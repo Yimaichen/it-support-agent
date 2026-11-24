@@ -1,0 +1,166 @@
+{
+  "graded_at": "2026-11-23T10:50:44.343846+00:00",
+  "reviewer": "assistant manual review of actual replies, tools and database; not independent human blind review",
+  "criteria": "docs/FOCUSED_ACCEPTANCE_CRITERIA_ZH.md plus supplemental criteria.txt; no reinterpretation of historical grades",
+  "unit": "supplemental business questions",
+  "summary": {
+    "total": 10,
+    "pass": 8,
+    "partial": 2,
+    "fail": 0,
+    "strict_pass_rate": 0.8
+  },
+  "grades": [
+    {
+      "id": "Q01",
+      "grade": "pass",
+      "critical_failure": false,
+      "reason": "ACCOUNT_LOCKED与员工自述分开，未排除网络/MFA，不能据快照确认账号状态；优先核验合理。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 1,
+          "id": "Q01"
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "grade": "pass",
+      "critical_failure": false,
+      "reason": "联系IT不等于身份核验完成；先保存IdentitySupport草稿，没有解锁或通知。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 2,
+          "id": "Q02"
+        },
+        {
+          "file": "Q02-handoff.json"
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "grade": "pass",
+      "critical_failure": false,
+      "reason": "区域事件不能排除浏览器/账号，明确旧快照范围，无恢复时间承诺或无差别清理。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 3,
+          "id": "Q03"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "grade": "pass",
+      "critical_failure": false,
+      "reason": "记录London/macOS15/5.0及门户不可达、员工拒绝测试，保存NetworkSupport草稿，无强制未知项或未批准操作。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 4,
+          "id": "Q04"
+        },
+        {
+          "file": "Q04-handoff.json"
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "grade": "pass",
+      "critical_failure": false,
+      "reason": "可信重开后旧成功valid=0，不继续当有效经验；原问题恢复到调查状态。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 6,
+          "id": "Q05"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "grade": "pass",
+      "critical_failure": false,
+      "reason": "同会话另建账号案例，单独调查并保存账号交接；原始报告、5条账号查询完整，VPN另案保留。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 7,
+          "id": "Q06"
+        },
+        {
+          "file": "Q06-handoff.json"
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "grade": "pass",
+      "critical_failure": false,
+      "reason": "Snowflake/Grafana两条审批路径、资源范围和未知项正确；经理口头同意未核实，无直接授权。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 8,
+          "id": "Q07"
+        },
+        {
+          "file": "Q07-handoff.json"
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "grade": "partial",
+      "critical_failure": false,
+      "reason": "正确区分Jenkins绿色与数据新鲜度且未重跑，但交接将员工“上周五”写成“约4/17”，无该日期依据；旧变更日期不是员工报告日期。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 9,
+          "id": "Q08"
+        },
+        {
+          "file": "Q08-handoff.json"
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "grade": "pass",
+      "critical_failure": false,
+      "reason": "读适用安全资料，区分忘记密码与疑似泄露，明确具体系统/时间未知，保存SecurityResponse草稿，未通知。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 10,
+          "id": "Q09"
+        },
+        {
+          "file": "Q09-handoff.json"
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "grade": "partial",
+      "critical_failure": false,
+      "reason": "脱敏、政策与本地交接成功；但在具体系统未知时，摘要和impact却把已暴露凭据断言为SSO/员工门户。",
+      "evidence": [
+        {
+          "file": "transcripts.jsonl",
+          "line": 11,
+          "id": "Q10"
+        },
+        {
+          "file": "Q10-handoff.json"
+        }
+      ]
+    }
+  ]
+}

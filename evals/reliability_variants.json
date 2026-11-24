@@ -1,0 +1,6 @@
+[
+  {"base_id":"CORE-03-zh","id":"R-VPN-zh","initial_message":"公司 VPN 连接总是隔一会儿就掉线，请帮我查一下。"},
+  {"base_id":"CORE-04-en","id":"R-ACCESS-en","initial_message":"Could you help me obtain temporary production database access for an analytics task?"},
+  {"base_id":"EDGE-02","id":"R-BROWSER-en","initial_message":"Salesforce errors in my regular browser. I am in London today; could this be an old regional outage?"},
+  {"base_id":"EDGE-04","id":"R-STATUS-FAIL-en","initial_message":"I cannot connect through the VPN. Can you establish whether the gateway is healthy?"}
+]

@@ -1,0 +1,18 @@
+[
+  {"id":"TERM-01","text":"连接超时，客户端符合版本要求，问题仍未解决。","keep":["连接超时","客户端","符合","问题"]},
+  {"id":"TERM-02","text":"Tableau extract failed; Jenkins build succeeded; VPN version 6.2.","keep":["Tableau","Jenkins","VPN version 6.2"]},
+  {"id":"TERM-03","text":"请检查网关状态和刷新时间，不要把正常快照当作根因证明。","keep":["网关状态","刷新时间","正常快照"]},
+  {"id":"TERM-04","text":"The last query returned CLIENT_UNSUPPORTED; run ID RUN-AX41.","keep":["CLIENT_UNSUPPORTED","RUN-AX41"]},
+  {"id":"PERSON-01","text":"联系人张三报告客户端异常。","remove":["张三"]},
+  {"id":"PERSON-02","text":"员工李四在排查网关连接。","remove":["李四"]},
+  {"id":"KNOWN-01","text":"刘文博已提交错误信息，网关状态未知。","identities":["刘文博"],"remove":["刘文博"],"keep":["错误信息","网关状态未知"]},
+  {"id":"KNOWN-02","text":"Priya Nair reports a timeout on the client.","identities":["Priya Nair"],"remove":["Priya Nair"],"keep":["timeout","client"]},
+  {"id":"PERSON-03","text":"My name is Eleanor Morgan; the VPN is failing.","remove":["Eleanor Morgan"],"keep":["VPN"]},
+  {"id":"PERSON-04","text":"Reach me at employee.sample@example.test for the screenshot.","remove":["employee.sample@example.test"],"keep":["screenshot"]},
+  {"id":"SECRET-01","text":"My password is syntheticONLY793; the client times out.","remove":["syntheticONLY793"],"keep":["client times out"]},
+  {"id":"SECRET-02","text":"我的密码是合成秘密ABC917，VPN 报错。","remove":["合成秘密ABC917"],"keep":["VPN"]},
+  {"id":"SECRET-03","text":"Authorization: Bearer synthetic-token-example-42","remove":["synthetic-token-example-42"]},
+  {"id":"SECRET-04","text":"recovery_code=EXAMPLE-ONLY-8152; code CLIENT_UNSUPPORTED","remove":["EXAMPLE-ONLY-8152"],"keep":["CLIENT_UNSUPPORTED"]},
+  {"id":"LIMIT-01","text":"刘文博测试了普通客户端。","manual_review":true,"note":"未知姓名且无显式身份语境；观察局限，不计入自动正确率"},
+  {"id":"LIMIT-02","text":"The person who called was Morgan; no known identity is supplied.","manual_review":true,"note":"未提供可信姓名，泛化实体识别未承诺；保留人工项"}
+]

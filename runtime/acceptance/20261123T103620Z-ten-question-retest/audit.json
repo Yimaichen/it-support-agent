@@ -1,0 +1,248 @@
+{
+  "reconciliation": {
+    "ok": true,
+    "checked": {
+      "inputs": 11,
+      "tool_results": 66,
+      "turn_results": 11,
+      "assistant_messages": 10,
+      "handoffs": 7,
+      "interrupted": 0
+    },
+    "errors": []
+  },
+  "events": {
+    "ui_submission": 12,
+    "turn_started": 11,
+    "execution_contract": 10,
+    "runtime_started": 10,
+    "runtime_ready": 10,
+    "case_context": 10,
+    "model_request": 48,
+    "runtime_progress": 224,
+    "model_usage": 48,
+    "tool_call": 66,
+    "tool_result": 66,
+    "runtime_final": 10,
+    "turn_finished": 11,
+    "ui_result": 12,
+    "handoff_synced": 10,
+    "submission_replayed": 1
+  },
+  "model_requests": 48,
+  "reported_tokens": 610235,
+  "native_usage": {
+    "input": 93084,
+    "output": 11935,
+    "cacheRead": 505216,
+    "cacheWrite": 0,
+    "reasoning": 0
+  },
+  "pricing": "unknown; reported tokens include cache reads; provider pricing not configured",
+  "turn_status_counts": [
+    {
+      "status": "completed",
+      "count": 11
+    }
+  ],
+  "private_resolution_status": [
+    {
+      "owner_user_id": "EMP-001",
+      "source_issue_id": "28586f1e-d9f1-4c49-9e53-0c646f1532d1",
+      "valid": 0
+    }
+  ],
+  "invalid_link_sessions": 0,
+  "handoffs": [
+    {
+      "issue_id": "9f883c91-4d2c-495f-8576-58b025943319",
+      "team": "Identity Support",
+      "summary": "员工报告登录公司账号时报 ACCOUNT_LOCKED（员工自述，未独立验证），并称普通网页可打开、验证器在身边。员工称已通过公司批准渠道联系 IT，但本会话没有可信的身份核验结果返回，POL-002 要求的\"经批准渠道完成身份核验\"仍为待确认状态。已查：SSO 健康快照（观测 2026-04-21 12:00 UTC）healthy、无活动故障，仅为合成快照，不证明个人账号已解锁；员工权限记录同为 2026-04-21 快照（Sales，portal sso/user）。未验证：锁定原因（反复失败、其他设备/他人使用旧凭据、策略或管理员操作）、是否仍处锁定、是否存在可疑登录。已建议停止反复尝试。本助手不能解锁。请 Identity Support 按批准渠道完成核验并核查锁定原因；员工未要求通知他人。",
+      "reports": 4,
+      "queries": 5,
+      "links": 0,
+      "contains_original_account_report": true,
+      "approval_routes": [
+        {
+          "approval_team": "Identity Support",
+          "policy_id": "POL-002",
+          "required_information": [
+            "employee identity through approved channel",
+            "error text"
+          ],
+          "resource": "employee_account",
+          "services": [
+            "sso"
+          ]
+        }
+      ]
+    },
+    {
+      "issue_id": "28586f1e-d9f1-4c49-9e53-0c646f1532d1",
+      "team": "Network Support",
+      "summary": "复发案例（员工报告，未经独立核实）：London 远程办公；VPN 每十分钟断开，macOS 15，客户端 5.0，普通网页正常，公司软件门户打不开。员工曾于先前告知“已恢复”，现报告同样问题再次出现，要求重新调查并保存完整交接。不执行任何测试或修复。已知事实：受支持基线 6.2（CHG-002，2026-04-20 生效），5.0 已不受支持；VPN 网关与 SSO 在 2026-04-21 12:00Z 快照中 healthy、无活动事故（非实时，不排除个人/路径问题）。先前恢复未说明做过什么，不能作为当前解决依据；仅有一条公开合成参考案例（旧客户端升级），其中 5.0 属当时基线，不适用于现在。未知项：断连起止时间、非机密错误码、门户地址与登录方式、实际办公地（档案为 Chicago，与 London 不一致）、是否其他受管设备受影响。下一步：Network Support 排查复发与门户访问，按 KB-CON-001/POL-004 仅通过批准门户升级至 6.2、不得禁用终端防护或使用不可信来源，升级后需观察连接稳定性。",
+      "reports": 1,
+      "queries": 11,
+      "links": 0,
+      "contains_original_account_report": false,
+      "approval_routes": []
+    },
+    {
+      "issue_id": "37c6aff4-06da-4c71-bd56-df4e77abd3f2",
+      "team": "Identity Support",
+      "summary": "独立账号案例（与 VPN 案例分开，员工报告、未经独立核实）：公司账号登录提示 ACCOUNT_LOCKED；员工称仍持有 MFA 设备并可使用；普通网页正常。未执行任何解锁、改密或测试；已提示停止重复尝试。已知事实：SSO 在 2026-04-21 12:00Z 快照中 healthy、无活动身份事故——这是有日期的快照，不能证明个人账号已解锁或处于锁定状态。未知项：锁定开始时间、完整的非机密错误文本与截图、锁定前是否有异常/可疑登录或误输密码次数、受影响的具体应用（是否仅 SSO/门户）。按 POL-002：解锁需 Identity Support 通过批准的渠道完成身份验证，代理不能解锁，聊天声明或持有设备不算验证；身份验证目前未完成。下一步：转 Identity Support 进行验证并解锁；解锁后需员工本人确认可登录才算恢复。",
+      "reports": 2,
+      "queries": 5,
+      "links": 0,
+      "contains_original_account_report": true,
+      "approval_routes": [
+        {
+          "approval_team": "Identity Support",
+          "policy_id": "POL-002",
+          "required_information": [
+            "employee identity through approved channel",
+            "error text"
+          ],
+          "resource": "employee_account",
+          "services": [
+            "sso"
+          ]
+        }
+      ]
+    },
+    {
+      "issue_id": "7c51d916-4e86-4ff8-a9c9-35bd2d811b53",
+      "team": "Data Owner and Security",
+      "summary": "员工（EMP-001，销售部）申请两项访问，用于分析工作：\n1) Snowflake 生产库 customer_metrics 的只读权限（POL-005，审批方 Data Owner and Security；需业务目的、资源、请求范围、期限、经理批准）。员工报告\"经理口头同意\"，属员工自述，未经核实，需 Data Owner 与 Security 验证；政策未规定书面证明格式。\n2) Grafana 仪表盘 ops-metrics 访问（POL-011，审批方 Analytics Owner；需仪表盘/项目、申请角色、数据分级）。ops-metrics 已提供，角色与数据分级未提供。\n未知：所需期限、具体业务目的细节、Grafana 申请角色与数据分级。\n未授予任何权限，未执行任何变更。",
+      "reports": 2,
+      "queries": 2,
+      "links": 0,
+      "contains_original_account_report": false,
+      "approval_routes": [
+        {
+          "approval_team": "Data Owner and Security",
+          "policy_id": "POL-005",
+          "required_information": [
+            "business purpose",
+            "resource",
+            "requested scope",
+            "duration",
+            "manager approval"
+          ],
+          "resource": "production_database",
+          "services": [
+            "snowflake"
+          ]
+        },
+        {
+          "approval_team": "Analytics Owner",
+          "policy_id": "POL-011",
+          "required_information": [
+            "dashboard/project",
+            "requested role",
+            "data classification"
+          ],
+          "resource": "grafana_dashboard",
+          "services": [
+            "grafana"
+          ]
+        }
+      ]
+    },
+    {
+      "issue_id": "e1d80153-645f-46f4-8e44-f76923043b0c",
+      "team": "Data Platform",
+      "summary": "员工报告：Tableau 报表仍显示上周五(约 4/17)的数据；Jenkins 页面可打开、作业显示绿色，但员工不知最近构建编号与 watermark，希望确认数据链路是否正常。已做只读检查（快照观测时间 2026-04-21T12:00Z）：Jenkins 控制端健康（CHG-004 London agent 池维护 4/16 18:00-18:20Z，早于报告期，时点仅相关不能证明因果）；Tableau Web 健康但不代表报表数据新鲜；Data Pipeline 为 degraded，详情称 freshness watermark 因计划连接器维护延迟，另有 CHG-001 周五(4/17 20:00-21:00Z)连接器维护，需比对 run ID/watermark。未知：具体报表引用、最近构建 ID、上游 watermark、预期数据时间、业务影响。按 POL-006 禁止重跑生产任务/改连接器，需 Data Platform 处置并补 required info。",
+      "reports": 2,
+      "queries": 11,
+      "links": 0,
+      "contains_original_account_report": false,
+      "approval_routes": [
+        {
+          "approval_team": "Data Platform",
+          "policy_id": "POL-006",
+          "required_information": [
+            "run IDs",
+            "freshness watermark",
+            "impact",
+            "recent changes"
+          ],
+          "resource": "production_pipeline",
+          "services": [
+            "tableau",
+            "jenkins",
+            "data_pipeline"
+          ]
+        }
+      ]
+    },
+    {
+      "issue_id": "29f62cf4-1909-4b53-ae15-3672719cb105",
+      "team": "Security Response",
+      "summary": "员工自述（未经核实）：在一个不熟悉的网页输入过公司密码，事后才怀疑该页面可能是钓鱼网站。非敏感症状：在不熟悉页面输入凭据的疑似钓鱼/凭据泄露。受影响服务：员工自述为公司密码，但具体系统（SSO/Okta 或其他应用）未确认，记为未知。时间：未提供，未知。当前账号是否仍可用、是否有可疑登录或其他异常：未知，员工未报告。已读适用资料 KB-ACC-005 与 POL-008：疑似凭据泄露属安全事件范围，需 Security Response 交接，不走常规忘记密码/自助重置流程；资料未定义凭据泄露后的授权处置顺序，需由 Security Response 提供指引。接交人待办：向员工获取非机密细节（发生时间、所输账号对应系统、是否观察到异常），并按 POL-008 开展事件处置；本地记录尚未通知任何团队。",
+      "reports": 2,
+      "queries": 4,
+      "links": 0,
+      "contains_original_account_report": false,
+      "approval_routes": [
+        {
+          "approval_team": "Security Response",
+          "policy_id": "POL-008",
+          "required_information": [
+            "non-sensitive symptom",
+            "time",
+            "affected service"
+          ],
+          "resource": "security_incident",
+          "services": [
+            "sso"
+          ]
+        }
+      ]
+    },
+    {
+      "issue_id": "d91976b8-184f-4818-9732-24b0f586b6a7",
+      "team": "Security Response",
+      "summary": "员工主动报告：在本次支持聊天中直接发送了账户密码和一次验证码（内容未复述、未要求再次提供）。按 KB-ACC-005 / POL-008 视为疑似凭据泄露，需 Security Response 交接，不做常规排障。已知：员工 EMP-001（Sales，Chicago），涉及身份服务 SSO/员工门户；具体受影响服务、验证码对应系统、发生时间、是否出现可疑登录等均未知。员工记录及整体情况未经独立核实。资料未定义泄露后的凭据变更步骤，不要以常规重置文章替代事件处置指引。请求 Security Response 提供可信指引并评估影响。",
+      "reports": 2,
+      "queries": 3,
+      "links": 1,
+      "contains_original_account_report": false,
+      "approval_routes": [
+        {
+          "approval_team": "Security Response",
+          "policy_id": "POL-008",
+          "required_information": [
+            "non-sensitive symptom",
+            "time",
+            "affected service"
+          ],
+          "resource": "security_incident",
+          "services": [
+            "sso"
+          ]
+        }
+      ]
+    }
+  ],
+  "privacy_scan": {
+    "files_checked": 38,
+    "known_values_checked": 4,
+    "hits": [],
+    "scope": "exact matches for synthetic fixture values and configured API secrets; not an exhaustive privacy guarantee"
+  },
+  "versions_now": {
+    "code": "311eafea8873a38f8277918162386548944b5296f80fa9ecc66cb7a51f536da5",
+    "frontend": "3e719de0b0f945318cdeca22a8e908ca7353f684a7845049c3b073ea267f52b3",
+    "data": "8abe8f64e49852bfcd17bb3d2177873f94ffabb1734c848b0ac0f73947bca22a",
+    "dependencies": "9d8c103be5ecd614b4cf447012b103e78fb6092975acdf04af8ab90655fdb186",
+    "build": "cb569fc37e51"
+  },
+  "matches_before": true,
+  "turn_stats_totals": {
+    "compactions": 0,
+    "tool_rejections": 1,
+    "missing_usage_messages": 0,
+    "additional_model_requests": 0
+  }
+}

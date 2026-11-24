@@ -1,0 +1,1332 @@
+{
+  "metadata": {
+    "schema_version": 2,
+    "evaluation": "actual_offline_bm25_not_llm",
+    "generated_at": "2026-11-23T14:25:25.770970+00:00",
+    "split": "holdout",
+    "k": 5,
+    "recall_definition": "mean(|relevant intersect top5| / |relevant|), macro per query",
+    "mrr_definition": "mean(1 / first relevant rank within top5), zero for absent/error",
+    "relevance_note": "Unjudged candidates are not proven irrelevant; labels may be incomplete.",
+    "holdout_note": "Predefined paraphrases, not blind/new-intent or unseen-corpus evaluation.",
+    "data_reference_time": "2026-04-21T12:00:00+00:00",
+    "knowledge_documents": 21,
+    "shared_seed_resolutions": 10,
+    "employee_context": "EMP-001",
+    "database": "fresh_temporary_seed_only",
+    "python": "3.12.10",
+    "rank_bm25_version": "0.2.2",
+    "corpus_sha256": "8997601342f2ee5a0e3adb9135cd43a6cc7e7fa96ee3644b535741ef3dff5331",
+    "queries_sha256": "47231eb42f9bc0b3e2477fb4b9baac9c4cc1c0b6edd7dac6eb8e085cc6eea70c",
+    "retrieval_source_sha256": "41b730af8fbc077e4733d21071a1f1ee33270faa93dea99a75fb265613337508",
+    "uv_lock_sha256": "20a8ff2ff8d1e81428d9168c143116bc4901ec46be7b106570ec8b83dc467c4b",
+    "evaluator_source_sha256": "818e4d59f2418b45fb93a496e5b00f9ca9c4fac842fcd7690cfb4830d46702b4",
+    "storage_source_sha256": "39b780f1a25d2122d3ec2540e408d32c55aaeb006c9f130806debbd93d95499f"
+  },
+  "summary": {
+    "n_queries": 20,
+    "hit_queries": 20,
+    "complete_recall_queries": 20,
+    "recall_at_5": 1.0,
+    "mrr_at_5": 0.9666666666666666,
+    "retrieval_errors": 0
+  },
+  "by_split": {
+    "holdout": {
+      "n_queries": 20,
+      "hit_queries": 20,
+      "complete_recall_queries": 20,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.9666666666666666,
+      "retrieval_errors": 0
+    }
+  },
+  "by_corpus": {
+    "knowledge": {
+      "n_queries": 10,
+      "hit_queries": 10,
+      "complete_recall_queries": 10,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.9333333333333333,
+      "retrieval_errors": 0
+    },
+    "resolutions": {
+      "n_queries": 10,
+      "hit_queries": 10,
+      "complete_recall_queries": 10,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "retrieval_errors": 0
+    }
+  },
+  "by_language": {
+    "en": {
+      "n_queries": 10,
+      "hit_queries": 10,
+      "complete_recall_queries": 10,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "retrieval_errors": 0
+    },
+    "zh": {
+      "n_queries": 10,
+      "hit_queries": 10,
+      "complete_recall_queries": 10,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.9333333333333333,
+      "retrieval_errors": 0
+    }
+  },
+  "groups": [
+    {
+      "split": "holdout",
+      "corpus": "knowledge",
+      "language": "en",
+      "n_queries": 5,
+      "hit_queries": 5,
+      "complete_recall_queries": 5,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "retrieval_errors": 0
+    },
+    {
+      "split": "holdout",
+      "corpus": "knowledge",
+      "language": "zh",
+      "n_queries": 5,
+      "hit_queries": 5,
+      "complete_recall_queries": 5,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.8666666666666666,
+      "retrieval_errors": 0
+    },
+    {
+      "split": "holdout",
+      "corpus": "resolutions",
+      "language": "en",
+      "n_queries": 5,
+      "hit_queries": 5,
+      "complete_recall_queries": 5,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "retrieval_errors": 0
+    },
+    {
+      "split": "holdout",
+      "corpus": "resolutions",
+      "language": "zh",
+      "n_queries": 5,
+      "hit_queries": 5,
+      "complete_recall_queries": 5,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "retrieval_errors": 0
+    }
+  ],
+  "incomplete_recall_query_ids": [],
+  "non_top1_query_ids": [
+    "Q-03-holdout-zh"
+  ],
+  "queries": [
+    {
+      "id": "Q-01-holdout-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-01",
+      "query": "ACCOUNT_LOCKED after several attempts",
+      "relevant_ids": [
+        "KB-ACC-002"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-ACC-002"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-ACC-001",
+        "KB-CMP-003",
+        "KB-CON-003",
+        "KB-PER-004"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-ACC-002",
+          "score": 18.021806629720015,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-ACC-001",
+          "score": 10.108219262771623,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-CMP-003",
+          "score": 9.096433570438894,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-CON-003",
+          "score": 7.925726575285629,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-PER-004",
+          "score": 7.470745447925919,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-01-holdout-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-01",
+      "query": "多次尝试之后显示账号锁定",
+      "relevant_ids": [
+        "KB-ACC-002"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-ACC-002"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-CMP-001",
+        "KB-CMP-004",
+        "KB-ACC-003",
+        "KB-ACC-004"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-ACC-002",
+          "score": 74.67027773634139,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-CMP-001",
+          "score": 31.923387928032167,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-CMP-004",
+          "score": 30.181985166387932,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-ACC-003",
+          "score": 29.81473504326519,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-004",
+          "score": 29.537132671558453,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-02-holdout-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-02",
+      "query": "CRM latency for everyone at Chicago office",
+      "relevant_ids": [
+        "KB-APP-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-APP-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-APP-004",
+        "KB-PER-002",
+        "KB-APP-002",
+        "KB-ACC-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-APP-001",
+          "score": 70.46809033684127,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-APP-004",
+          "score": 68.73058989588824,
+          "source_type": "guidance",
+          "expired": true
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-PER-002",
+          "score": 61.813781803240545,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-APP-002",
+          "score": 56.564136380666035,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-005",
+          "score": 52.87662048629,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-02-holdout-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-02",
+      "query": "芝加哥办公室同事的客户管理系统都卡顿",
+      "relevant_ids": [
+        "KB-APP-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-APP-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-APP-004",
+        "KB-PER-002",
+        "KB-APP-002",
+        "KB-ACC-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-APP-001",
+          "score": 132.15198287221472,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-APP-004",
+          "score": 99.75532253822468,
+          "source_type": "guidance",
+          "expired": true
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-PER-002",
+          "score": 99.01633366891969,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-APP-002",
+          "score": 93.80669774744216,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-005",
+          "score": 93.09227100334651,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-03-holdout-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-03",
+      "query": "Corporate VPN drops every ten minutes",
+      "relevant_ids": [
+        "KB-CON-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-CON-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-CON-002",
+        "KB-CON-003",
+        "KB-CON-004",
+        "KB-ACC-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-CON-001",
+          "score": 108.87382341338845,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-CON-002",
+          "score": 108.0985813377417,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-CON-003",
+          "score": 98.93887270626352,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-CON-004",
+          "score": 97.83641511735968,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-005",
+          "score": 82.67824617138173,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-03-holdout-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-03",
+      "query": "公司网络连接每十分钟就中断",
+      "relevant_ids": [
+        "KB-CON-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 0.3333333333333333,
+      "first_relevant_rank": 3,
+      "matched_ids": [
+        "KB-CON-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-CON-002",
+        "KB-CON-004",
+        "KB-CON-003",
+        "KB-ACC-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-CON-002",
+          "score": 139.80992355491003,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-CON-004",
+          "score": 127.669832370924,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-CON-001",
+          "score": 118.25051938046212,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-CON-003",
+          "score": 114.96613368636113,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-005",
+          "score": 99.72574432126686,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-04-holdout-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-04",
+      "query": "Need temporary read access to production DB",
+      "relevant_ids": [
+        "KB-PER-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-PER-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-CON-003",
+        "KB-PER-002",
+        "KB-ACC-004",
+        "KB-CON-002"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-PER-001",
+          "score": 28.32981294600374,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-CON-003",
+          "score": 17.45545760873432,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-PER-002",
+          "score": 17.047283916935584,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-ACC-004",
+          "score": 16.68897998363668,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-CON-002",
+          "score": 16.47033417606209,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-04-holdout-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-04",
+      "query": "想临时只读访问生产库",
+      "relevant_ids": [
+        "KB-PER-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-PER-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-PER-002",
+        "KB-CON-004",
+        "KB-ACC-005",
+        "KB-ACC-004"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-PER-001",
+          "score": 52.06356841089425,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-PER-002",
+          "score": 41.63826597781416,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-CON-004",
+          "score": 30.41816684465684,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-ACC-005",
+          "score": 30.09072855222124,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-ACC-004",
+          "score": 28.74724446774773,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-05-holdout-en",
+      "corpus": "knowledge",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-05",
+      "query": "Jenkins pipeline Tableau wrong since maintenance",
+      "relevant_ids": [
+        "KB-CMP-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-CMP-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-CMP-004",
+        "KB-ACC-005",
+        "KB-CMP-002",
+        "KB-PER-004"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-CMP-001",
+          "score": 104.00748661583604,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-CMP-004",
+          "score": 82.97999325614909,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-ACC-005",
+          "score": 75.36245674123367,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-CMP-002",
+          "score": 73.05864161918475,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-PER-004",
+          "score": 71.55480932619001,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-05-holdout-zh",
+      "corpus": "knowledge",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-05",
+      "query": "构建数据管道仪表盘维护后数据不对",
+      "relevant_ids": [
+        "KB-CMP-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "KB-CMP-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "KB-CMP-003",
+        "KB-APP-003",
+        "KB-CMP-004",
+        "KB-CMP-002"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "KB-CMP-001",
+          "score": 175.41084165544268,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 2,
+          "source_id": "KB-CMP-003",
+          "score": 162.44946557221692,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 3,
+          "source_id": "KB-APP-003",
+          "score": 157.9921956459555,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 4,
+          "source_id": "KB-CMP-004",
+          "score": 150.43414536612855,
+          "source_type": "guidance",
+          "expired": false
+        },
+        {
+          "rank": 5,
+          "source_id": "KB-CMP-002",
+          "score": 146.19381687529904,
+          "source_type": "guidance",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": "Q-06-holdout-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-06",
+      "query": "Past successful self service credential reset",
+      "relevant_ids": [
+        "HIST-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-010",
+        "HIST-002",
+        "HIST-006",
+        "HIST-008"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-001",
+          "score": 9.458314183392988,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-010",
+          "score": 5.717132381451261,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-002",
+          "score": 5.26107810723126,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-006",
+          "score": 3.9525576244730636,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-008",
+          "score": 3.9485107894306504,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-06-holdout-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-06",
+      "query": "以前通过自助重置密码解决的案例",
+      "relevant_ids": [
+        "HIST-001"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-001"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-003",
+        "HIST-009",
+        "HIST-008",
+        "HIST-002"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-001",
+          "score": 58.37785203140925,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-003",
+          "score": 38.47582869712628,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-009",
+          "score": 32.36219995507864,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-008",
+          "score": 27.87551534513514,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-002",
+          "score": 25.57758606851595,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-07-holdout-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-07",
+      "query": "CRM worked privately but not in original browser",
+      "relevant_ids": [
+        "HIST-002"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-002"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-010",
+        "HIST-009",
+        "HIST-007",
+        "HIST-001"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-002",
+          "score": 93.83975711020035,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-010",
+          "score": 71.37950420344524,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-009",
+          "score": 41.72118269863736,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-007",
+          "score": 39.514352534753094,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-001",
+          "score": 38.45640174053815,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-07-holdout-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-07",
+      "query": "客户管理系统在隐私窗口正常普通窗口不行",
+      "relevant_ids": [
+        "HIST-002"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-002"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-010",
+        "HIST-007"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-002",
+          "score": 100.43111313506226,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-010",
+          "score": 98.2811690513693,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-007",
+          "score": 66.90143764333686,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-08-holdout-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-08",
+      "query": "Previous old client disconnects fixed with upgrade",
+      "relevant_ids": [
+        "HIST-003"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-003"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-007",
+        "HIST-005"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-003",
+          "score": 24.146559152230218,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-007",
+          "score": 10.886895621119224,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-005",
+          "score": 10.404710276121383,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-08-holdout-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-08",
+      "query": "以前旧版公司网络客户端升级后恢复",
+      "relevant_ids": [
+        "HIST-003"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-003"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-004",
+        "HIST-009",
+        "HIST-010",
+        "HIST-002"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-003",
+          "score": 55.59242463326248,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-004",
+          "score": 41.267876757318994,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-009",
+          "score": 38.305495703140934,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-010",
+          "score": 35.20266965006879,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-002",
+          "score": 31.73146846458604,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-09-holdout-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-09",
+      "query": "Analytics Owner enabled authorized dashboard scope",
+      "relevant_ids": [
+        "HIST-005"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-005"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-007",
+        "HIST-006",
+        "HIST-008"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-005",
+          "score": 68.02666042047387,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-007",
+          "score": 57.77269773448496,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-006",
+          "score": 32.898319697420995,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-008",
+          "score": 29.51503126907606,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-09-holdout-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-09",
+      "query": "分析负责人批准后恢复仪表盘访问的记录",
+      "relevant_ids": [
+        "HIST-005"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-005"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-007",
+        "HIST-009",
+        "HIST-008",
+        "HIST-001"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-005",
+          "score": 77.56088307944182,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-007",
+          "score": 74.4268693309069,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-009",
+          "score": 41.67496976218218,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-008",
+          "score": 41.09885405661078,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-001",
+          "score": 40.49608693552314,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-10-holdout-en",
+      "corpus": "resolutions",
+      "language": "en",
+      "split": "holdout",
+      "equivalence_group": "RETR-10",
+      "query": "Successful report refresh with verified data watermark",
+      "relevant_ids": [
+        "HIST-007"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-007"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-002",
+        "HIST-001",
+        "HIST-006",
+        "HIST-008"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-007",
+          "score": 22.08197941205851,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-002",
+          "score": 10.889312671283857,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-001",
+          "score": 9.15771178601621,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-006",
+          "score": 9.153813278177969,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-008",
+          "score": 9.149766443135556,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    },
+    {
+      "id": "Q-10-holdout-zh",
+      "corpus": "resolutions",
+      "language": "zh",
+      "split": "holdout",
+      "equivalence_group": "RETR-10",
+      "query": "已确认上游水位正常后刷新报表成功的案例",
+      "relevant_ids": [
+        "HIST-007"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank_at_5": 1.0,
+      "first_relevant_rank": 1,
+      "matched_ids": [
+        "HIST-007"
+      ],
+      "missing_relevant_ids": [],
+      "unjudged_ids_at_5": [
+        "HIST-005",
+        "HIST-010",
+        "HIST-008",
+        "HIST-001"
+      ],
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source_id": "HIST-007",
+          "score": 134.37764794058313,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 2,
+          "source_id": "HIST-005",
+          "score": 88.08798286692286,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 3,
+          "source_id": "HIST-010",
+          "score": 69.92204340186055,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 4,
+          "source_id": "HIST-008",
+          "score": 58.70115007881938,
+          "source_type": "historical",
+          "expired": null
+        },
+        {
+          "rank": 5,
+          "source_id": "HIST-001",
+          "score": 54.46597868061387,
+          "source_type": "historical",
+          "expired": null
+        }
+      ]
+    }
+  ]
+}

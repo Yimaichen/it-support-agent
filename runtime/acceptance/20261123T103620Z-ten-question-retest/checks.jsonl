@@ -1,0 +1,16 @@
+{"check": "Q01", "status": "completed"}
+{"check": "Q02", "status": "completed"}
+{"check": "idempotent-replay", "unchanged_messages": true, "unchanged_latest": true}
+{"check": "employee-isolation", "route": "/api/sessions/1be281a4-4c41-438f-bc30-ec37e74eb29b", "status": 404}
+{"check": "employee-isolation", "route": "/api/handoffs/9f883c91-4d2c-495f-8576-58b025943319", "status": 404}
+{"check": "Q03", "status": "completed"}
+{"check": "Q04", "status": "completed"}
+{"check": "trusted-confirm", "issues": [{"issue_id": "28586f1e-d9f1-4c49-9e53-0c646f1532d1", "title": "London 远程办公 VPN 每十分钟断开，公司软件门户无法访问", "category": "connectivity", "status": "resolved", "updated_at": "2026-11-23T10:37:08.881923+00:00"}]}
+{"check": "actual-api-restart", "old_pid": 11828, "new_pid": 11880, "same_messages": true, "same_issues": true}
+{"check": "Q05", "status": "completed"}
+{"check": "Q06", "status": "completed"}
+{"check": "Q07", "status": "completed"}
+{"check": "Q08", "status": "completed"}
+{"check": "Q09", "status": "completed"}
+{"check": "Q10", "status": "completed"}
+{"check": "complete", "version_stable": true}

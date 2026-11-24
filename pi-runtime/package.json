@@ -1,0 +1,23 @@
+{
+  "name": "it-support-pi-runtime",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "start": "tsx bridge.ts"
+  },
+  "dependencies": {
+    "@earendil-works/pi-ai": "1.5.0",
+    "@earendil-works/pi-coding-agent": "1.5.0",
+    "@sinclair/typebox": "0.34.41",
+    "undici": "7.30.2"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  }
+}

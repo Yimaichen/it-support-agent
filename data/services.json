@@ -1,0 +1,119 @@
+[
+  {
+    "id": "sso",
+    "name": "Identity / SSO",
+    "aliases": [
+      "SSO",
+      "Okta",
+      "登录",
+      "单点登录"
+    ],
+    "status": "healthy",
+    "region_status": {},
+    "checked_at": "2026-04-21T12:00:00Z",
+    "details": "No active identity incident at snapshot. This does not prove an individual account is unlocked.",
+    "supported_versions": []
+  },
+  {
+    "id": "vpn",
+    "name": "Corporate VPN",
+    "aliases": [
+      "VPN",
+      "公司网络",
+      "虚拟专用网络"
+    ],
+    "status": "healthy",
+    "region_status": {},
+    "checked_at": "2026-04-21T12:00:00Z",
+    "details": "Gateway reachable at snapshot; individual client and local-network failures remain possible.",
+    "supported_versions": [
+      "6.2"
+    ]
+  },
+  {
+    "id": "salesforce",
+    "name": "Salesforce",
+    "aliases": [
+      "CRM",
+      "SFDC",
+      "客户管理"
+    ],
+    "status": "degraded",
+    "region_status": {
+      "Chicago": "degraded",
+      "London": "healthy",
+      "Shanghai": "healthy"
+    },
+    "checked_at": "2026-04-21T12:00:00Z",
+    "details": "INC-CRM-0421: Chicago office egress latency since 09:10Z. Other regions are not affected. No confirmed recovery estimate.",
+    "supported_versions": []
+  },
+  {
+    "id": "jenkins",
+    "name": "Jenkins",
+    "aliases": [
+      "CI",
+      "构建",
+      "持续集成"
+    ],
+    "status": "healthy",
+    "region_status": {},
+    "checked_at": "2026-04-21T12:00:00Z",
+    "details": "Controller healthy; inspect individual job metadata before inferring a successful build.",
+    "supported_versions": []
+  },
+  {
+    "id": "data_pipeline",
+    "name": "Data Pipeline",
+    "aliases": [
+      "ETL",
+      "数据管道",
+      "生产数据库"
+    ],
+    "status": "degraded",
+    "region_status": {},
+    "checked_at": "2026-04-21T12:00:00Z",
+    "details": "Freshness watermark delayed since scheduled connector maintenance. Relationship to any specific report requires evidence.",
+    "supported_versions": []
+  },
+  {
+    "id": "tableau",
+    "name": "Tableau",
+    "aliases": [
+      "dashboard",
+      "仪表盘",
+      "报表"
+    ],
+    "status": "healthy",
+    "region_status": {},
+    "checked_at": "2026-04-21T12:00:00Z",
+    "details": "Web service healthy; this is not evidence that every report contains fresh upstream data.",
+    "supported_versions": []
+  },
+  {
+    "id": "snowflake",
+    "name": "Snowflake production database",
+    "aliases": [
+      "Snowflake",
+      "生产数仓"
+    ],
+    "status": "not_monitored",
+    "region_status": {},
+    "checked_at": "2026-04-21T12:00:00Z",
+    "details": "Access request workflow is available under POL-005. No Snowflake health monitor or live entitlement integration is configured; data_pipeline status does not establish Snowflake availability.",
+    "supported_versions": []
+  },
+  {
+    "id": "grafana",
+    "name": "Grafana internal dashboards",
+    "aliases": [
+      "Grafana",
+      "监控看板"
+    ],
+    "status": "not_monitored",
+    "region_status": {},
+    "checked_at": "2026-04-21T12:00:00Z",
+    "details": "Access request workflow is available under POL-010. No Grafana health monitor or live entitlement integration is configured; Tableau status and permissions do not establish Grafana health or access.",
+    "supported_versions": []
+  }
+]

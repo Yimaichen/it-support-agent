@@ -1,0 +1,202 @@
+[
+  {
+    "id": "EMP-001",
+    "name": "Alex Demo",
+    "department": "Sales",
+    "location": "Chicago",
+    "devices": [
+      {
+        "id": "DEMO-DEVICE-001",
+        "os": "Windows 11",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "id": "DEMO-DEVICE-006",
+        "os": "macOS 15",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "permissions": [
+      {
+        "service_id": "salesforce",
+        "resource_type": "service",
+        "resource_id": "demo_salesforce_org",
+        "role": "standard",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "vpn",
+        "resource_type": "network",
+        "resource_id": "corporate_remote_access",
+        "role": "employee",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "sso",
+        "resource_type": "service",
+        "resource_id": "employee_portal",
+        "role": "user",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "updated_at": "2026-04-21T12:00:00Z",
+    "synthetic": true
+  },
+  {
+    "id": "EMP-002",
+    "name": "Lin Demo",
+    "department": "Research",
+    "location": "Shanghai",
+    "devices": [
+      {
+        "id": "DEMO-DEVICE-002",
+        "os": "macOS 15",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "id": "DEMO-DEVICE-007",
+        "os": "Windows 11",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "permissions": [
+      {
+        "service_id": "tableau",
+        "resource_type": "project",
+        "resource_id": "research_reporting",
+        "role": "viewer",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "vpn",
+        "resource_type": "network",
+        "resource_id": "corporate_remote_access",
+        "role": "employee",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "sso",
+        "resource_type": "service",
+        "resource_id": "employee_portal",
+        "role": "user",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "updated_at": "2026-04-21T12:00:00Z",
+    "synthetic": true
+  },
+  {
+    "id": "EMP-003",
+    "name": "Sam Demo",
+    "department": "Engineering",
+    "location": "London",
+    "devices": [
+      {
+        "id": "DEMO-DEVICE-003",
+        "os": "Ubuntu 24.04",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "permissions": [
+      {
+        "service_id": "jenkins",
+        "resource_type": "project",
+        "resource_id": "engineering_ci",
+        "role": "viewer",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "data_pipeline",
+        "resource_type": "database",
+        "resource_id": "engineering_analytics_nonprod",
+        "role": "read_nonprod",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "sso",
+        "resource_type": "service",
+        "resource_id": "employee_portal",
+        "role": "user",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "updated_at": "2026-04-21T12:00:00Z",
+    "synthetic": true
+  },
+  {
+    "id": "EMP-004",
+    "name": "Maya Demo",
+    "department": "Finance",
+    "location": "London",
+    "devices": [
+      {
+        "id": "DEMO-DEVICE-004",
+        "os": "Windows 11",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "permissions": [
+      {
+        "service_id": "tableau",
+        "resource_type": "project",
+        "resource_id": "finance_reporting",
+        "role": "viewer",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "salesforce",
+        "resource_type": "service",
+        "resource_id": "demo_salesforce_org",
+        "role": "read_only",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "sso",
+        "resource_type": "service",
+        "resource_id": "employee_portal",
+        "role": "user",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "updated_at": "2026-04-21T12:00:00Z",
+    "synthetic": true
+  },
+  {
+    "id": "EMP-005",
+    "name": "Bo Demo",
+    "department": "Operations",
+    "location": "Shanghai",
+    "devices": [
+      {
+        "id": "DEMO-DEVICE-005",
+        "os": "Windows 11",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "permissions": [
+      {
+        "service_id": "vpn",
+        "resource_type": "network",
+        "resource_id": "corporate_remote_access",
+        "role": "employee",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "data_pipeline",
+        "resource_type": "database",
+        "resource_id": "operations_nonprod",
+        "role": "read_nonprod",
+        "updated_at": "2026-04-21T12:00:00Z"
+      },
+      {
+        "service_id": "sso",
+        "resource_type": "service",
+        "resource_id": "employee_portal",
+        "role": "user",
+        "updated_at": "2026-04-21T12:00:00Z"
+      }
+    ],
+    "updated_at": "2026-04-21T12:00:00Z",
+    "synthetic": true
+  }
+]

@@ -1,0 +1,442 @@
+[
+  {
+    "id": "Q-01-tuning-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-01",
+    "query": "account locked",
+    "relevant_ids": [
+      "KB-ACC-002"
+    ]
+  },
+  {
+    "id": "Q-01-tuning-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-01",
+    "query": "账号被锁定",
+    "relevant_ids": [
+      "KB-ACC-002"
+    ]
+  },
+  {
+    "id": "Q-01-holdout-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-01",
+    "query": "ACCOUNT_LOCKED after several attempts",
+    "relevant_ids": [
+      "KB-ACC-002"
+    ]
+  },
+  {
+    "id": "Q-01-holdout-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-01",
+    "query": "多次尝试之后显示账号锁定",
+    "relevant_ids": [
+      "KB-ACC-002"
+    ]
+  },
+  {
+    "id": "Q-02-tuning-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-02",
+    "query": "Salesforce slow Chicago",
+    "relevant_ids": [
+      "KB-APP-001"
+    ]
+  },
+  {
+    "id": "Q-02-tuning-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-02",
+    "query": "芝加哥 Salesforce 很慢",
+    "relevant_ids": [
+      "KB-APP-001"
+    ]
+  },
+  {
+    "id": "Q-02-holdout-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-02",
+    "query": "CRM latency for everyone at Chicago office",
+    "relevant_ids": [
+      "KB-APP-001"
+    ]
+  },
+  {
+    "id": "Q-02-holdout-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-02",
+    "query": "芝加哥办公室同事的客户管理系统都卡顿",
+    "relevant_ids": [
+      "KB-APP-001"
+    ]
+  },
+  {
+    "id": "Q-03-tuning-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-03",
+    "query": "VPN disconnects client version",
+    "relevant_ids": [
+      "KB-CON-001"
+    ]
+  },
+  {
+    "id": "Q-03-tuning-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-03",
+    "query": "VPN 客户端反复断开",
+    "relevant_ids": [
+      "KB-CON-001"
+    ]
+  },
+  {
+    "id": "Q-03-holdout-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-03",
+    "query": "Corporate VPN drops every ten minutes",
+    "relevant_ids": [
+      "KB-CON-001"
+    ]
+  },
+  {
+    "id": "Q-03-holdout-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-03",
+    "query": "公司网络连接每十分钟就中断",
+    "relevant_ids": [
+      "KB-CON-001"
+    ]
+  },
+  {
+    "id": "Q-04-tuning-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-04",
+    "query": "production database access",
+    "relevant_ids": [
+      "KB-PER-001"
+    ]
+  },
+  {
+    "id": "Q-04-tuning-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-04",
+    "query": "生产数据库权限申请",
+    "relevant_ids": [
+      "KB-PER-001"
+    ]
+  },
+  {
+    "id": "Q-04-holdout-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-04",
+    "query": "Need temporary read access to production DB",
+    "relevant_ids": [
+      "KB-PER-001"
+    ]
+  },
+  {
+    "id": "Q-04-holdout-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-04",
+    "query": "想临时只读访问生产库",
+    "relevant_ids": [
+      "KB-PER-001"
+    ]
+  },
+  {
+    "id": "Q-05-tuning-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-05",
+    "query": "report regression after Friday maintenance",
+    "relevant_ids": [
+      "KB-CMP-001"
+    ]
+  },
+  {
+    "id": "Q-05-tuning-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-05",
+    "query": "周五维护后报表异常",
+    "relevant_ids": [
+      "KB-CMP-001"
+    ]
+  },
+  {
+    "id": "Q-05-holdout-en",
+    "corpus": "knowledge",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-05",
+    "query": "Jenkins pipeline Tableau wrong since maintenance",
+    "relevant_ids": [
+      "KB-CMP-001"
+    ]
+  },
+  {
+    "id": "Q-05-holdout-zh",
+    "corpus": "knowledge",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-05",
+    "query": "构建数据管道仪表盘维护后数据不对",
+    "relevant_ids": [
+      "KB-CMP-001"
+    ]
+  },
+  {
+    "id": "Q-06-tuning-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-06",
+    "query": "password reset restored sign in",
+    "relevant_ids": [
+      "HIST-001"
+    ]
+  },
+  {
+    "id": "Q-06-tuning-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-06",
+    "query": "密码重置恢复登录",
+    "relevant_ids": [
+      "HIST-001"
+    ]
+  },
+  {
+    "id": "Q-06-holdout-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-06",
+    "query": "Past successful self service credential reset",
+    "relevant_ids": [
+      "HIST-001"
+    ]
+  },
+  {
+    "id": "Q-06-holdout-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-06",
+    "query": "以前通过自助重置密码解决的案例",
+    "relevant_ids": [
+      "HIST-001"
+    ]
+  },
+  {
+    "id": "Q-07-tuning-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-07",
+    "query": "browser session refresh Salesforce",
+    "relevant_ids": [
+      "HIST-002"
+    ]
+  },
+  {
+    "id": "Q-07-tuning-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-07",
+    "query": "Salesforce 浏览器会话刷新",
+    "relevant_ids": [
+      "HIST-002"
+    ]
+  },
+  {
+    "id": "Q-07-holdout-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-07",
+    "query": "CRM worked privately but not in original browser",
+    "relevant_ids": [
+      "HIST-002"
+    ]
+  },
+  {
+    "id": "Q-07-holdout-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-07",
+    "query": "客户管理系统在隐私窗口正常普通窗口不行",
+    "relevant_ids": [
+      "HIST-002"
+    ]
+  },
+  {
+    "id": "Q-08-tuning-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-08",
+    "query": "VPN upgrade fixed disconnects",
+    "relevant_ids": [
+      "HIST-003"
+    ]
+  },
+  {
+    "id": "Q-08-tuning-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-08",
+    "query": "VPN 升级解决断连",
+    "relevant_ids": [
+      "HIST-003"
+    ]
+  },
+  {
+    "id": "Q-08-holdout-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-08",
+    "query": "Previous old client disconnects fixed with upgrade",
+    "relevant_ids": [
+      "HIST-003"
+    ]
+  },
+  {
+    "id": "Q-08-holdout-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-08",
+    "query": "以前旧版公司网络客户端升级后恢复",
+    "relevant_ids": [
+      "HIST-003"
+    ]
+  },
+  {
+    "id": "Q-09-tuning-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-09",
+    "query": "Tableau access after approval",
+    "relevant_ids": [
+      "HIST-005"
+    ]
+  },
+  {
+    "id": "Q-09-tuning-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-09",
+    "query": "审批后恢复 Tableau 权限",
+    "relevant_ids": [
+      "HIST-005"
+    ]
+  },
+  {
+    "id": "Q-09-holdout-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-09",
+    "query": "Analytics Owner enabled authorized dashboard scope",
+    "relevant_ids": [
+      "HIST-005"
+    ]
+  },
+  {
+    "id": "Q-09-holdout-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-09",
+    "query": "分析负责人批准后恢复仪表盘访问的记录",
+    "relevant_ids": [
+      "HIST-005"
+    ]
+  },
+  {
+    "id": "Q-10-tuning-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "tuning",
+    "equivalence_group": "RETR-10",
+    "query": "fresh upstream view refresh",
+    "relevant_ids": [
+      "HIST-007"
+    ]
+  },
+  {
+    "id": "Q-10-tuning-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "tuning",
+    "equivalence_group": "RETR-10",
+    "query": "上游正常刷新视图恢复",
+    "relevant_ids": [
+      "HIST-007"
+    ]
+  },
+  {
+    "id": "Q-10-holdout-en",
+    "corpus": "resolutions",
+    "language": "en",
+    "split": "holdout",
+    "equivalence_group": "RETR-10",
+    "query": "Successful report refresh with verified data watermark",
+    "relevant_ids": [
+      "HIST-007"
+    ]
+  },
+  {
+    "id": "Q-10-holdout-zh",
+    "corpus": "resolutions",
+    "language": "zh",
+    "split": "holdout",
+    "equivalence_group": "RETR-10",
+    "query": "已确认上游水位正常后刷新报表成功的案例",
+    "relevant_ids": [
+      "HIST-007"
+    ]
+  }
+]

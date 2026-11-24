@@ -1,0 +1,50 @@
+{
+  "vpn": [
+    "VPN",
+    "虚拟专用网络",
+    "公司网络连接"
+  ],
+  "sso": [
+    "SSO",
+    "single sign-on",
+    "单点登录",
+    "Okta"
+  ],
+  "salesforce": [
+    "Salesforce",
+    "CRM",
+    "SFDC",
+    "客户管理系统"
+  ],
+  "tableau": [
+    "Tableau",
+    "dashboard",
+    "仪表盘",
+    "报表"
+  ],
+  "jenkins": [
+    "Jenkins",
+    "CI",
+    "构建任务"
+  ],
+  "data_pipeline": [
+    "ETL",
+    "data pipeline",
+    "数据管道",
+    "数据新鲜度"
+  ],
+  "mfa": [
+    "MFA",
+    "multi-factor authentication",
+    "多因素认证",
+    "验证码设备"
+  ],
+  "snowflake": [
+    "Snowflake",
+    "生产数仓"
+  ],
+  "grafana": [
+    "Grafana",
+    "监控看板"
+  ]
+}

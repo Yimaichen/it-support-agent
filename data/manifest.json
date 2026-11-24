@@ -1,0 +1,6 @@
+{
+  "schema_version": 2,
+  "synthetic": true,
+  "reference_time": "2026-04-21T12:00:00Z",
+  "description": "Synthetic fixtures, not real company infrastructure. Relative times use this reference, not the machine date."
+}

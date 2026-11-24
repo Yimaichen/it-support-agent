@@ -1,0 +1,23 @@
+{
+  "method": "Playwright with installed Chrome; no Browser/IAB tool available",
+  "checks": [
+    {
+      "name": "desktop-conversation-load",
+      "messages": 2,
+      "overflow": false
+    },
+    {
+      "name": "refresh-readonly",
+      "passed": true
+    },
+    {
+      "name": "mobile-conversation-load",
+      "overflow": false
+    },
+    {
+      "name": "mobile-case-drawer",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

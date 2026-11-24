@@ -1,0 +1,137 @@
+[
+  {
+    "id": "vpn_upgrade",
+    "version": 1,
+    "service_id": "vpn",
+    "resource": "vpn_client",
+    "action": "upgrade",
+    "policy_id": "POL-004",
+    "document_refs": [
+      "KB-CON-001"
+    ],
+    "source_sha256": "2c68b0900f1c46c08146ca39bd50f9e9de9b7d23b30f8335704093e3bf1b2dc5",
+    "policy_sha256": "ae9d3d85fa0b454501dd11f4679e9a7d6f9d3793951fe7dbf4d007ba0bd877de",
+    "environment": "Synthetic managed employee environment",
+    "text": {
+      "zh": "通过公司批准的软件门户将 VPN 客户端升级到当前支持的 6.2 版；仅在安装程序要求时重启。升级后观察连接稳定性，并验证所需内部资源能否访问。",
+      "en": "Upgrade the VPN client to the currently supported 6.2 release through the approved company software portal. Restart only if the installer requires it. Observe connection stability and verify access to the required internal resource."
+    },
+    "source_max_age_seconds": 900,
+    "query_max_age_seconds": 300,
+    "supported_versions": [
+      "6.2"
+    ],
+    "verification": "Employee reports connection stability and required internal access.",
+    "failure_exit": "report_result_then_handoff"
+  },
+  {
+    "id": "vpn_connectivity",
+    "version": 1,
+    "service_id": "vpn",
+    "resource": "vpn_client",
+    "action": "upgrade",
+    "policy_id": "POL-004",
+    "document_refs": [
+      "KB-CON-002"
+    ],
+    "source_sha256": "c1de441ef420451626d4a9f6e39d847f61b419bad02abd45af9ace5122f3f4db",
+    "policy_sha256": "ae9d3d85fa0b454501dd11f4679e9a7d6f9d3793951fe7dbf4d007ba0bd877de",
+    "environment": "Synthetic managed employee environment",
+    "text": {
+      "zh": "先检查未连接 VPN 时的普通网络连接；在允许的情况下，使用另一个可信网络进行对照，并反馈普通连接和所需内部资源的访问结果。",
+      "en": "Check ordinary connectivity before connecting to VPN. Where permitted, compare using another trusted network and report both ordinary connectivity and required internal access."
+    },
+    "source_max_age_seconds": 900,
+    "query_max_age_seconds": 300,
+    "verification": "Employee reports connection stability and required internal access.",
+    "failure_exit": "report_result_then_handoff"
+  },
+  {
+    "id": "vpn_reconnect",
+    "version": 1,
+    "service_id": "vpn",
+    "resource": "vpn_client",
+    "action": "upgrade",
+    "policy_id": "POL-004",
+    "document_refs": [
+      "KB-CON-003"
+    ],
+    "source_sha256": "c57cc06087bd1f42bb668444d688fc55cf2d9c2ae0003e1b9d12cda18837a669",
+    "policy_sha256": "ae9d3d85fa0b454501dd11f4679e9a7d6f9d3793951fe7dbf4d007ba0bd877de",
+    "environment": "Synthetic managed employee environment",
+    "text": {
+      "zh": "使用标准 VPN 界面重新连接，再检查所需内部资源能否打开；记录非敏感错误文字，不更改 DNS 设置。",
+      "en": "Reconnect using the standard VPN interface, then check whether the required internal resource opens. Record nonsecret error text; leave DNS settings unchanged."
+    },
+    "source_max_age_seconds": 900,
+    "query_max_age_seconds": 300,
+    "verification": "Employee reports connection stability and required internal access.",
+    "failure_exit": "report_result_then_handoff"
+  },
+  {
+    "id": "sso_reset",
+    "version": 1,
+    "service_id": "sso",
+    "resource": "employee_account",
+    "action": "reset_password",
+    "policy_id": "POL-001",
+    "document_refs": [
+      "KB-ACC-001"
+    ],
+    "source_sha256": "eef0374379145bf0516ff518bbe6d4613867c2ba431ff6d90361f6a9a6300de4",
+    "policy_sha256": "d878982b90ec0ec396c070ad0f311a7e84fbad8ac5ef1b9c30130db979e39ecd",
+    "environment": "Synthetic managed employee environment",
+    "text": {
+      "zh": "从公司门户进入批准的自助密码重置页面，在该页面完成重置，再尝试登录并反馈是否恢复访问。",
+      "en": "Open the approved self-service password reset entry from the company portal. Complete the reset there, then retry sign-in and report whether access is restored."
+    },
+    "source_max_age_seconds": 900,
+    "query_max_age_seconds": 300,
+    "verification": "Employee reports whether the requested sign-in works.",
+    "failure_exit": "report_result_then_handoff"
+  },
+  {
+    "id": "salesforce_private_window",
+    "version": 1,
+    "service_id": "salesforce",
+    "resource": "application",
+    "action": "diagnose",
+    "policy_id": "POL-007",
+    "document_refs": [
+      "KB-APP-002"
+    ],
+    "source_sha256": "cc74fffaf63c24d0163eb489dee9bf2f9d471c9323d541577b08ba6055990720",
+    "policy_sha256": "1fa68b0fb51e4411fce5bb3f8a1cafa1f449bba3179f48417e96612a015fdb05",
+    "environment": "Synthetic managed employee environment",
+    "text": {
+      "zh": "在批准的浏览器中使用隐私窗口检查原有工作流程，反馈是否正常；保留 Cookie 等会话资料在本机。",
+      "en": "Try the original workflow in an approved browser private window and report whether it works. Keep cookies and session data on your device."
+    },
+    "source_max_age_seconds": 900,
+    "query_max_age_seconds": 300,
+    "verification": "Employee reports original workflow outcome; private-window success alone does not confirm original-browser recovery.",
+    "failure_exit": "report_result_then_handoff"
+  },
+  {
+    "id": "salesforce_session_refresh",
+    "version": 1,
+    "service_id": "salesforce",
+    "resource": "application",
+    "action": "diagnose",
+    "policy_id": "POL-007",
+    "document_refs": [
+      "KB-APP-002"
+    ],
+    "source_sha256": "cc74fffaf63c24d0163eb489dee9bf2f9d471c9323d541577b08ba6055990720",
+    "policy_sha256": "1fa68b0fb51e4411fce5bb3f8a1cafa1f449bba3179f48417e96612a015fdb05",
+    "environment": "Synthetic managed employee environment",
+    "text": {
+      "zh": "仅当同一工作流程在批准的隐私窗口正常时，先保存工作并注意刷新会导致退出登录，再仅刷新 Salesforce 站点会话，重新登录并在原浏览器验证原工作流程；不要清除全部浏览数据。若隐私窗口也失败，停止此步骤并反馈错误。",
+      "en": "Only if the same workflow works in an approved private window: save your work and note that a session refresh signs you out. Refresh only the Salesforce site session, sign in again, and verify the original workflow in the original browser. Keep all other browsing data. If the private window also fails, stop this step and report the error."
+    },
+    "source_max_age_seconds": 900,
+    "query_max_age_seconds": 300,
+    "verification": "Employee reports original workflow outcome; private-window success alone does not confirm original-browser recovery.",
+    "failure_exit": "report_result_then_handoff"
+  }
+]

@@ -1,0 +1,260 @@
+[
+  {
+    "id": "POL-001",
+    "title": "Password self-service",
+    "title_zh": "密码自助",
+    "service_ids": [
+      "sso"
+    ],
+    "resource": "employee_account",
+    "action": "reset_password",
+    "decision": "guide",
+    "approval_team": null,
+    "required_information": [
+      "current sign-in symptom"
+    ],
+    "prohibited_actions": [
+      "request password or one-time code"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z",
+    "applicability": "Routine incorrect-password recovery through the approved company portal. Not a substitute for account unlock, unavailable-MFA identity verification, or suspected-compromise response. For suspected disclosure, consult POL-008 before adding recovery instructions."
+  },
+  {
+    "id": "POL-002",
+    "title": "Account unlock verification",
+    "title_zh": "账号解锁验证",
+    "service_ids": [
+      "sso"
+    ],
+    "resource": "employee_account",
+    "action": "unlock",
+    "decision": "approval_required",
+    "approval_team": "Identity Support",
+    "required_information": [
+      "employee identity through approved channel",
+      "error text"
+    ],
+    "prohibited_actions": [
+      "agent unlocks account",
+      "accept chat identity claim"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z",
+    "applicability": "Account-locked errors require approved identity verification by Identity Support. Possession of a device or a chat assertion is not verification. Ordinary reset instructions do not unlock an account."
+  },
+  {
+    "id": "POL-003",
+    "title": "MFA recovery",
+    "title_zh": "MFA 恢复",
+    "service_ids": [
+      "sso"
+    ],
+    "resource": "mfa",
+    "action": "recover",
+    "decision": "approval_required",
+    "approval_team": "Identity Support",
+    "required_information": [
+      "whether device is available",
+      "approved identity check"
+    ],
+    "prohibited_actions": [
+      "request recovery code",
+      "disable MFA"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z",
+    "applicability": "MFA recovery or unavailable verification device requires approved identity checks; do not infer this need solely from other sign-in errors."
+  },
+  {
+    "id": "POL-004",
+    "title": "Supported VPN client",
+    "title_zh": "受支持的 VPN 客户端",
+    "service_ids": [
+      "vpn"
+    ],
+    "resource": "vpn_client",
+    "action": "upgrade",
+    "decision": "guide",
+    "approval_team": null,
+    "required_information": [
+      "current version",
+      "operating system"
+    ],
+    "prohibited_actions": [
+      "disable endpoint protection",
+      "install from untrusted source"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z"
+  },
+  {
+    "id": "POL-005",
+    "title": "Production database access",
+    "title_zh": "生产数据库权限",
+    "service_ids": [
+      "data_pipeline",
+      "snowflake"
+    ],
+    "resource": "production_database",
+    "action": "grant",
+    "decision": "approval_required",
+    "approval_team": "Data Owner and Security",
+    "required_information": [
+      "business purpose",
+      "resource",
+      "requested scope",
+      "duration",
+      "manager approval"
+    ],
+    "prohibited_actions": [
+      "grant production access",
+      "reuse past approval"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z",
+    "applicability": "Production access to the stated exact resource and requested scope. Record employee-reported manager agreement as reported and unverified; Data Owner and Security verify approval. No specific written-proof format or prior directory correction is defined here. Missing details do not prevent saving a local draft."
+  },
+  {
+    "id": "POL-006",
+    "title": "Production pipeline operations",
+    "title_zh": "生产管道操作",
+    "service_ids": [
+      "jenkins",
+      "data_pipeline",
+      "tableau"
+    ],
+    "resource": "production_pipeline",
+    "action": "modify",
+    "decision": "handoff_required",
+    "approval_team": "Data Platform",
+    "required_information": [
+      "run IDs",
+      "freshness watermark",
+      "impact",
+      "recent changes"
+    ],
+    "prohibited_actions": [
+      "rerun production jobs",
+      "edit secrets",
+      "change connector configuration"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z",
+    "required_status_checks": [
+      "jenkins",
+      "data_pipeline",
+      "tableau"
+    ]
+  },
+  {
+    "id": "POL-007",
+    "title": "Safe application diagnostics",
+    "title_zh": "安全应用排障",
+    "service_ids": [
+      "salesforce",
+      "tableau"
+    ],
+    "resource": "application",
+    "action": "diagnose",
+    "decision": "guide",
+    "approval_team": null,
+    "required_information": [
+      "region",
+      "browser",
+      "impact range"
+    ],
+    "prohibited_actions": [
+      "delete all browser data indiscriminately",
+      "share session cookies"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z"
+  },
+  {
+    "id": "POL-008",
+    "title": "Security incident",
+    "title_zh": "疑似安全事件",
+    "service_ids": [
+      "sso",
+      "vpn",
+      "salesforce",
+      "jenkins",
+      "data_pipeline",
+      "tableau",
+      "snowflake",
+      "grafana"
+    ],
+    "resource": "security_incident",
+    "action": "investigate",
+    "decision": "handoff_required",
+    "approval_team": "Security Response",
+    "required_information": [
+      "non-sensitive symptom",
+      "time",
+      "affected service"
+    ],
+    "prohibited_actions": [
+      "request token",
+      "continue normal troubleshooting of suspected compromise"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z",
+    "applicability": "Suspected compromise, credential disclosure, or suspicious sign-in activity uses Security Response handoff, rather than continued routine troubleshooting. Collect only nonsecret symptom, time if known, and affected service; unknown details do not block a local draft. This dataset does not define an authorized post-compromise credential-remediation sequence. Do not present a routine reset article as that sequence; obtain the Security Response team's trusted guidance. No actual notification occurs in this local demo."
+  },
+  {
+    "id": "POL-009",
+    "title": "Build project permissions",
+    "title_zh": "构建项目权限",
+    "service_ids": [
+      "jenkins"
+    ],
+    "resource": "jenkins_project",
+    "action": "grant",
+    "decision": "approval_required",
+    "approval_team": "Engineering Owner",
+    "required_information": [
+      "project",
+      "required role",
+      "business justification"
+    ],
+    "prohibited_actions": [
+      "grant admin because request is urgent"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z"
+  },
+  {
+    "id": "POL-010",
+    "title": "Dashboard permissions",
+    "title_zh": "仪表盘权限",
+    "service_ids": [
+      "tableau"
+    ],
+    "resource": "tableau_project",
+    "action": "grant",
+    "decision": "approval_required",
+    "approval_team": "Analytics Owner",
+    "required_information": [
+      "project",
+      "requested role",
+      "data classification"
+    ],
+    "prohibited_actions": [
+      "bypass row-level security"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z"
+  },
+  {
+    "id": "POL-011",
+    "title": "Grafana dashboard permissions",
+    "title_zh": "Grafana 仪表盘权限",
+    "service_ids": [
+      "grafana"
+    ],
+    "resource": "grafana_dashboard",
+    "action": "grant",
+    "decision": "approval_required",
+    "approval_team": "Analytics Owner",
+    "required_information": [
+      "dashboard/project",
+      "requested role",
+      "data classification"
+    ],
+    "prohibited_actions": [
+      "bypass row-level security"
+    ],
+    "updated_at": "2026-04-20T08:00:00Z"
+  }
+]

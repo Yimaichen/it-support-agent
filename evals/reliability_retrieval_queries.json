@@ -1,0 +1,6 @@
+[
+  {"id":"R07-KB-en","corpus":"knowledge","language":"en","split":"holdout","equivalence_group":"R07-KB","query":"Who signs off temporary read-only production database privileges and what request details are needed?","relevant_ids":["KB-PER-001"]},
+  {"id":"R07-KB-zh","corpus":"knowledge","language":"zh","split":"holdout","equivalence_group":"R07-KB","query":"申请生产数据库只读权限，需要哪些材料以及谁来审批？","relevant_ids":["KB-PER-001"]},
+  {"id":"R07-HIST-en","corpus":"resolutions","language":"en","split":"holdout","equivalence_group":"R07-HIST","query":"Past disconnects stopped after an old VPN client was upgraded","relevant_ids":["HIST-003"]},
+  {"id":"R07-HIST-zh","corpus":"resolutions","language":"zh","split":"holdout","equivalence_group":"R07-HIST","query":"以前旧版 VPN 客户端升级后不再掉线的处理记录","relevant_ids":["HIST-003"]}
+]

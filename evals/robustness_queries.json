@@ -1,0 +1,62 @@
+[
+  {
+    "query": "ConectSecure VPN disconect",
+    "relevant": "KB-CON-001",
+    "category": "typo_with_product"
+  },
+  {
+    "query": "VPN 6.1 keeps 断连",
+    "relevant": "KB-CON-001",
+    "category": "mixed_language"
+  },
+  {
+    "query": "VPN DNS_FAIL after upgrade",
+    "relevant": "KB-CON-002",
+    "category": "exact_error"
+  },
+  {
+    "query": "pipline failed Tableau stale",
+    "relevant": "KB-CMP-003",
+    "category": "typo_cross_service"
+  },
+  {
+    "query": "Snowflake ANALYTICS_PROD read-only",
+    "relevant": "KB-PER-001",
+    "category": "resource_specific"
+  },
+  {
+    "query": "Grafana kube-observe 权限",
+    "relevant": "KB-PER-003",
+    "category": "resource_mixed_language"
+  },
+  {
+    "query": "réseau VPN déconnecté",
+    "relevant": "KB-CON-001",
+    "category": "unsupported_language_with_product"
+  },
+  {
+    "query": "zzquuxUnsupportedPhrase927364",
+    "relevant": null,
+    "category": "no_vocabulary_overlap"
+  },
+  {
+    "query": "钓鱼页面填了密码 credential exposure suspicious login",
+    "relevant": "KB-ACC-005",
+    "category": "incident_applicability"
+  },
+  {
+    "query": "I entered credentials on a suspicious page, now account works",
+    "relevant": "KB-ACC-005",
+    "category": "incident_not_resolved_by_login"
+  },
+  {
+    "query": "INVALID_CREDENTIALS 密码输错，没有异常活动",
+    "relevant": "KB-ACC-001",
+    "category": "routine_recovery"
+  },
+  {
+    "query": "账号 ACCOUNT_LOCKED 设备还在",
+    "relevant": "KB-ACC-002",
+    "category": "locked_not_password_reset"
+  }
+]

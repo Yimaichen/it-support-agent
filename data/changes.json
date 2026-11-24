@@ -1,0 +1,42 @@
+[
+  {
+    "id": "CHG-001",
+    "service_id": "data_pipeline",
+    "started_at": "2026-04-17T20:00:00Z",
+    "ended_at": "2026-04-17T21:00:00Z",
+    "summary": "Friday connector maintenance; compare run IDs and watermarks before asserting causality.",
+    "regions": [
+      "global"
+    ]
+  },
+  {
+    "id": "CHG-002",
+    "service_id": "vpn",
+    "started_at": "2026-04-20T08:00:00Z",
+    "ended_at": "2026-04-20T08:30:00Z",
+    "summary": "Supported VPN baseline changed to 6.2; version 5.0 is no longer supported.",
+    "regions": [
+      "global"
+    ]
+  },
+  {
+    "id": "CHG-003",
+    "service_id": "salesforce",
+    "started_at": "2026-04-21T09:10:00Z",
+    "ended_at": null,
+    "summary": "Chicago egress incident investigation ongoing; existing incident INC-CRM-0421.",
+    "regions": [
+      "Chicago"
+    ]
+  },
+  {
+    "id": "CHG-004",
+    "service_id": "jenkins",
+    "started_at": "2026-04-16T18:00:00Z",
+    "ended_at": "2026-04-16T18:20:00Z",
+    "summary": "Agent pool maintenance, completed before current reported freshness issue. Timing alone is not causal proof.",
+    "regions": [
+      "London"
+    ]
+  }
+]

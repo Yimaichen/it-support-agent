@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-11-23T10:36:20.171851+00:00",
+  "versions": {
+    "code": "311eafea8873a38f8277918162386548944b5296f80fa9ecc66cb7a51f536da5",
+    "frontend": "3e719de0b0f945318cdeca22a8e908ca7353f684a7845049c3b073ea267f52b3",
+    "data": "8abe8f64e49852bfcd17bb3d2177873f94ffabb1734c848b0ac0f73947bca22a",
+    "dependencies": "9d8c103be5ecd614b4cf447012b103e78fb6092975acdf04af8ab90655fdb186",
+    "build": "cb569fc37e51"
+  },
+  "model": "deepseek-flash",
+  "thinking_mode": "disabled",
+  "reasoning_effort": "high",
+  "base_url": "https://api.deepseek.com",
+  "limits": {
+    "max_model_attempts": 12,
+    "max_tool_calls": 24,
+    "turn_timeout_seconds": 180.0,
+    "request_timeout_seconds": 45.0,
+    "max_reported_tokens": 200000,
+    "max_output_tokens": 8192
+  },
+  "criteria_sha256": "6f8dd53dda16ff9d3b16b6e5dcd10c86069e0984ee44b6d479d50f9c85d90e98",
+  "port": 8514,
+  "sessions": {
+    "account": "1be281a4-4c41-438f-bc30-ec37e74eb29b",
+    "regional": "4abda877-3e47-4036-adf7-de25678cd786",
+    "vpn": "117913d9-4563-41f1-a7ae-73bac21ef981",
+    "access": "93372943-404f-43a5-a394-f6ab3e3759dc",
+    "pipeline": "76f903ce-ab0f-4bf4-9847-8dcf3081b9b6",
+    "incident": "95c71871-0186-46a9-9a2b-bc8950fa068c",
+    "secret": "e99a4339-c163-47e2-b665-2dcb5a7cc825"
+  },
+  "server_pids": [
+    11828,
+    11880
+  ],
+  "status": "completed",
+  "finished_at": "2026-11-23T10:38:27.661976+00:00",
+  "versions_after": {
+    "code": "311eafea8873a38f8277918162386548944b5296f80fa9ecc66cb7a51f536da5",
+    "frontend": "3e719de0b0f945318cdeca22a8e908ca7353f684a7845049c3b073ea267f52b3",
+    "data": "8abe8f64e49852bfcd17bb3d2177873f94ffabb1734c848b0ac0f73947bca22a",
+    "dependencies": "9d8c103be5ecd614b4cf447012b103e78fb6092975acdf04af8ab90655fdb186",
+    "build": "cb569fc37e51"
+  },
+  "version_stable": true
+}
